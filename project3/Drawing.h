@@ -205,32 +205,32 @@ void roadside()
 	}
 
 	// ✅ تحميل صورة الجوانب
-	load(2); // تحميل roedside.jpg
+	load(2);
 	glEnable(GL_TEXTURE_2D);
-	glDisable(GL_LIGHTING); // ⚠️ تعطيل الإضاءة
+	glDisable(GL_LIGHTING); 
 
 	// ✅ الجانب الأيسر
 	glBindTexture(GL_TEXTURE_2D, texture);
 	glBegin(GL_QUADS);
-	glColor3f(1, 1, 1); // ⚠️ ضروري لتجنب تشويه الألوان
-	glTexCoord2f(0.0, 0.0); glVertex3f(-100.0, -10, 0);  // أسفل-يسار
-	glTexCoord2f(1.0, 0.0); glVertex3f(-1.0, -10, 0);    // أسفل-يمين
-	glTexCoord2f(1.0, 1.0); glVertex3f(-1.0, 400, 0);    // أعلى-يمين
-	glTexCoord2f(0.0, 1.0); glVertex3f(-100.0, 400, 0);  // أعلى-يسار
+	glColor3f(1, 1, 1); 
+	glTexCoord2f(0.0, 0.0); glVertex3f(-100.0, -10, 0);
+	glTexCoord2f(1.0, 0.0); glVertex3f(-1.0, -10, 0);    
+	glTexCoord2f(1.0, 1.0); glVertex3f(-1.0, 400, 0);   
+	glTexCoord2f(0.0, 1.0); glVertex3f(-100.0, 400, 0);  
 	glEnd();
 
 	// ✅ الجانب الأيمن
 	glBindTexture(GL_TEXTURE_2D, texture);
 	glBegin(GL_QUADS);
-	glColor3f(1, 1, 1); // ⚠️ ضروري
-	glTexCoord2f(0.0, 0.0); glVertex3f(1.0, -10, 0);     // أسفل-يسار
-	glTexCoord2f(1.0, 0.0); glVertex3f(100.0, -10, 0);   // أسفل-يمين
-	glTexCoord2f(1.0, 1.0); glVertex3f(100.0, 400, 0);   // أعلى-يمين
-	glTexCoord2f(0.0, 1.0); glVertex3f(1.0, 400, 0);     // أعلى-يسار
+	glColor3f(1, 1, 1); 
+	glTexCoord2f(0.0, 0.0); glVertex3f(1.0, -10, 0);    
+	glTexCoord2f(1.0, 0.0); glVertex3f(100.0, -10, 0);  
+	glTexCoord2f(1.0, 1.0); glVertex3f(100.0, 400, 0);   
+	glTexCoord2f(0.0, 1.0); glVertex3f(1.0, 400, 0);     
 	glEnd();
 
 	glDisable(GL_TEXTURE_2D);
-	glEnable(GL_LIGHTING); // إعادة تمكين الإضاءة
+	glEnable(GL_LIGHTING); 
 }
 
 
