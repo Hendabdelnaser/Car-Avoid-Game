@@ -204,12 +204,12 @@ void roadside()
 		glPopMatrix();
 	}
 
-	// ✅ تحميل صورة الجوانب
+	
 	load(2);
 	glEnable(GL_TEXTURE_2D);
 	glDisable(GL_LIGHTING); 
 
-	// ✅ الجانب الأيسر
+	//  Left road side
 	glBindTexture(GL_TEXTURE_2D, texture);
 	glBegin(GL_QUADS);
 	glColor3f(1, 1, 1); 
@@ -219,7 +219,7 @@ void roadside()
 	glTexCoord2f(0.0, 1.0); glVertex3f(-100.0, 400, 0);  
 	glEnd();
 
-	// ✅ الجانب الأيمن
+	// right road side
 	glBindTexture(GL_TEXTURE_2D, texture);
 	glBegin(GL_QUADS);
 	glColor3f(1, 1, 1); 
